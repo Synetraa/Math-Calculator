@@ -1,0 +1,53 @@
+using System;
+
+class Ohjelma
+{
+    static void Main()
+    {
+        int luku;
+
+        // Kysytään käyttäjältä numeroa 1-10 väliltä
+        do
+        {
+            Console.Write("Anna luku 1 ja 10 väliltä ?: ");
+        } while (!int.TryParse(Console.ReadLine(), out luku) || luku < 1 || luku > 10);
+
+        //Funktio
+        Laskelmat(luku);
+
+        // Pidetään konsoli auki
+        Console.WriteLine("Paina Enter sulkeaksi ohjelman.");
+        Console.ReadLine();
+    }
+        //Matikka ja laskelmat
+    static void Laskelmat(int luku)
+    {
+        int a = 1 * luku;
+        int b = 2 * luku;
+        int c = 3 * luku;
+        int d = 4 * luku;
+        int e = 5 * luku;
+
+        int a2 = luku / 1;
+        int b2 = luku / 2;
+        int c2 = luku / 3;
+        int d2 = luku / 4;
+        int e2 = luku / 5;
+
+        int a3 = 1 % luku;
+        int b3 = 2 % luku;
+        int c3 = 3 % luku;
+        int d3 = 4 % luku;
+        int e3 = 5 % luku;
+
+        //Konsooli kirjoittaa seuraavan kaavan mukaisesti
+
+        Console.Write($" 1 * {luku} = {a}  "); Console.Write($"1 / {luku} = {a2}  "); Console.Write($"1 % {luku} = {a3}  ");Console.WriteLine("");
+        Console.Write($" 2 * {luku} = {b}  "); Console.Write($"2 / {luku} = {b2}  "); Console.Write($"2 % {luku} = {b3}  ");Console.WriteLine("");
+        Console.Write($" 3 * {luku} = {c}  "); Console.Write($"3 / {luku} = {c2}  "); Console.Write($"3 % {luku} = {c3}  ");Console.WriteLine("");
+        Console.Write($" 4 * {luku} = {d}  "); Console.Write($"4 / {luku} = {d2}  "); Console.Write($"4 % {luku} = {d3}  ");Console.WriteLine("");
+        Console.Write($" 5 * {luku} = {e}  "); Console.Write($"5 / {luku} = {e2}  "); Console.Write($"5 % {luku} = {e3}  ");Console.WriteLine("");
+
+
+    }
+}
